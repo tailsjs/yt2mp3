@@ -1,0 +1,17 @@
+{
+  "name": "yt2mp3",
+  "version": "1.0.0",
+  "description": "Download YouTube video as mp3!",
+  "main": "index.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "tailsjs",
+  "license": "ISC"
+}
