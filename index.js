@@ -6,12 +6,7 @@ const fetch = require("node-fetch"),
 
 if(!args[0])return console.log("No video URL!");
 if(!args[0].match(/(http(s?)\:\/\/)?(www\.)?(youtube\.com\/watch\?v\=.{11}|youtu\.be\/.{11})/))return console.log("You must input youtube url!\nExample: https://youtube.com/watch?v=testvideo12");
-let videoid = "";
-if(args[0].includes("youtube.com")){
-    videoid = args[0].split("=")[1]
-}else{
-    videoid = args[0].split("/")[3]
-};
+let videoid = args[0].includes("youtube.com") ? args[0].split("=")[1] : args[0].split("/")[3];
 logger("Ok, trying to download....");
 
 fetch("https://www.yt-download.org/api/button/mp3/" + videoid)
